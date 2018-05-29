@@ -52,8 +52,12 @@ function reformat(str) {
 	// Check if the parameter is a string, if else throw an exception
 	if(!(typeof(str) === 'string' || str instanceof String)) throw new Error("str should be a string");
 	
-	return str;
+	// Putting the string in lowercase except the first character
+	return str.length>0 ? str[0].toUpperCase()+str.toLowerCase().substr(1) : "";
 }
+
+## TEST
+reformat("liMeSHArp DeveLoper TEST") => "Limesharp developer test"
 
 ###### if we type in our console your function and reformat("liMeSHArp DeveLoper TEST") then the result should be Lmshrp dvlpr tst
 
