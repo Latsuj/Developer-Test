@@ -95,7 +95,7 @@ Your solution:
 **/
 function next_binary_number(arr) {
 	// Check if the parameter is an array, if else throw an exception
-	if(!(arr instanceof Array)) throw new Error("arr should be an array");
+	if(!(arr instanceof Array) || arr.length==0) throw new Error("arr should be a not empty array");
 	
 	// If all the elements of the array are filling in with 1
 	// we just fill an array with a 1 and some 0 depending of the arr.length
@@ -105,8 +105,17 @@ function next_binary_number(arr) {
 		return tmp;
 	}
 	
+	// We loop through the arr from the end for finding the first 0 and changing him to 1
+	// Then we go in the other way and changing the 1 to 0
+	
 	return arr;
 }
+
+##TEST
+next_binary_number([1,1,1,1]); => [1, 0, 0, 0, 0]
+next_binary_number([1,1]); => [1,0,0]
+next_binary_number([1]); => [1,0]
+next_binary_number([]); => Exception
 
 ###### if we type in our console your function and next_binary_number([1,0,0,0,0,0,0,0,0,1]) then the result should look like 1,0,0,0,0,0,0,0,1,0 (or as an array).
 
