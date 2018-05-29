@@ -89,12 +89,21 @@ Your solution:
 
 /**
 * Just a function for finding the next binary number
+* @param Array arr The initial array
 * @exception If the parameter arr is not an array, throw an exception (ths function can only work with an array)
 * @version 1.0 Kevin "Latsuj" Justal
 **/
 function next_binary_number(arr) {
 	// Check if the parameter is an array, if else throw an exception
 	if(!(arr instanceof Array)) throw new Error("arr should be an array");
+	
+	// If all the elements of the array are filling in with 1
+	// we just fill an array with a 1 and some 0 depending of the arr.length
+	// [1,1,1,1] => [1]+[0,0,0,0] => [1,0,0,0,0]
+	if(arr.indexOf(0)==-1) {
+		for(var i=arr.length,tmp = [1];i--;) tmp.push(0);
+		return tmp;
+	}
 	
 	return arr;
 }
