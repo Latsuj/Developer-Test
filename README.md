@@ -13,8 +13,14 @@ Your solution:
 
 /**
 * Repeat 3 times the contents of an array
+* @exception If the parameter arr is not an array, throw an exception (ths function can only work with an array)
+* @version 1.0 Kevin "Latsuj" Justal
 **/
 function repeat(arr) {
+	// Check if the parameter is an array, if else throw an exception
+	if(!(arr instanceof Array)) throw new Error("arr should be an array");
+	
+	
 	return arr;
 }
 
@@ -29,8 +35,13 @@ Your solution:
 
 /**
 * No vowels, lowercase except the first letter
+* @exception If the str parameter is not a string or an object string, I throw an error
+* @version 1.0 Kevin "Latsuj" Justal
 **/
 function reformat(str) {
+	// Check if the parameter is a string, if else throw an exception
+	if(!(typeof(str) === 'string' || str instanceof String)) throw new Error("str should be a string");
+	
 	return str;
 }
 
@@ -53,8 +64,13 @@ Your solution:
 
 /**
 * Just a function for finding the next binary number
+* @exception If the parameter arr is not an array, throw an exception (ths function can only work with an array)
+* @version 1.0 Kevin "Latsuj" Justal
 **/
 function next_binary_number(arr) {
+	// Check if the parameter is an array, if else throw an exception
+	if(!(arr instanceof Array)) throw new Error("arr should be an array");
+	
 	return arr;
 }
 
