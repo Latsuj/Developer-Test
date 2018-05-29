@@ -13,6 +13,8 @@ Your solution:
 
 /**
 * Repeat 3 times the contents of an array
+* Looping through n until 0, and concataining the arr n times
+* @param Array arr The initial array
 * @exception If the parameter arr is not an array, throw an exception (ths function can only work with an array)
 * @version 1.0 Kevin "Latsuj" Justal
 **/
@@ -20,9 +22,17 @@ function repeat(arr) {
 	// Check if the parameter is an array, if else throw an exception
 	if(!(arr instanceof Array)) throw new Error("arr should be an array");
 	
-	
-	return arr;
+	var n=3,tmp=[];
+	while(n--) tmp = tmp.concat(arr);
+	return tmp;
 }
+
+##TEST
+repeat([1,2,3]) => [1, 2, 3, 1, 2, 3, 1, 2, 3]
+repeat([1,2]) => [1, 2, 1, 2, 1, 2]
+repeat([]) => []
+repeat("test") => Exception
+repeat([1]) => [1,1,1]
 
 ###### if we type in our console your function and repeat([1,2,3]) then the result should be [1,2,3,1,2,3,1,2,3] 
 
