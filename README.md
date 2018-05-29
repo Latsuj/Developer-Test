@@ -56,12 +56,19 @@ function reformat(str) {
 	// Remove the voyel of the string
 	str = str.replace(/[aeiou]/gi, '');
 	
+	// Remove the first space or some non word caractere (I dont know if I have to do that or not)
+	str = str.replace(/^\W*/gi, '');
+	
 	// Putting the string in lowercase except the first character
 	return str.length>0 ? str[0].toUpperCase()+str.toLowerCase().substr(1) : "";
 }
 
 ## TEST
-reformat("liMeSHArp DeveLoper TEST") => "Limesharp developer test"
+reformat("liMeSHArp DeveLoper TEST") => "Lmshrp dvlpr tst"
+reformat("a liMeSHArp DeveLoper TEST") => "Lmshrp dvlpr tst"
+reformat("") => ""
+reformat([0]) => Exception
+reformat("aeiou") => ""
 
 ###### if we type in our console your function and reformat("liMeSHArp DeveLoper TEST") then the result should be Lmshrp dvlpr tst
 
