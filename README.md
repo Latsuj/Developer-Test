@@ -45,12 +45,16 @@ Your solution:
 
 /**
 * No vowels, lowercase except the first letter
+* @param str The initial string
 * @exception If the str parameter is not a string or an object string, I throw an error
 * @version 1.0 Kevin "Latsuj" Justal
 **/
 function reformat(str) {
 	// Check if the parameter is a string, if else throw an exception
 	if(!(typeof(str) === 'string' || str instanceof String)) throw new Error("str should be a string");
+	
+	// Remove the voyel of the string
+	str = str.replace(/[aeiou]/gi, '');
 	
 	// Putting the string in lowercase except the first character
 	return str.length>0 ? str[0].toUpperCase()+str.toLowerCase().substr(1) : "";
