@@ -15,6 +15,7 @@ Your solution:
 * Repeat 3 times the contents of an array
 * Looping through n until 0, and concataining the arr n times
 * @param Array arr The initial array
+* @return array The array with 3 times is content
 * @exception If the parameter arr is not an array, throw an exception (ths function can only work with an array)
 * @version 1.0 Kevin "Latsuj" Justal
 **/
@@ -46,6 +47,7 @@ Your solution:
 /**
 * No vowels, lowercase except the first letter
 * @param str The initial string
+* @return String The string with no voyel and in lowercase
 * @exception If the str parameter is not a string or an object string, I throw an error
 * @version 1.0 Kevin "Latsuj" Justal
 **/
@@ -90,6 +92,7 @@ Your solution:
 /**
 * Just a function for finding the next binary number
 * @param Array arr The initial array
+* @return array The next binary number
 * @exception If the parameter arr is not an array, throw an exception (ths function can only work with an array)
 * @version 1.0 Kevin "Latsuj" Justal
 **/
@@ -104,10 +107,15 @@ function next_binary_number(arr) {
 		for(var i=arr.length,tmp = [1];i--;) tmp.push(0);
 		return tmp;
 	}
-	
 	// We loop through the arr from the end for finding the first 0 and changing him to 1
+		for(var i=arr.length;i--;) {
+		if(arr[i]==0) { 
+			arr[i]=1;
+			break;
+		}
+	}
 	// Then we go in the other way and changing the 1 to 0
-	
+	for(i++;i<arr.length;i++) arr[i]=0;
 	return arr;
 }
 
@@ -116,6 +124,9 @@ next_binary_number([1,1,1,1]); => [1, 0, 0, 0, 0]
 next_binary_number([1,1]); => [1,0,0]
 next_binary_number([1]); => [1,0]
 next_binary_number([]); => Exception
+next_binary_number([1,0,1]); => [1, 1, 0]
+next_binary_number([1,0]); => [1, 1]
+next_binary_number([1,0,1,0]); => [1, 0, 1, 1]
 
 ###### if we type in our console your function and next_binary_number([1,0,0,0,0,0,0,0,0,1]) then the result should look like 1,0,0,0,0,0,0,0,1,0 (or as an array).
 
