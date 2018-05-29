@@ -11,6 +11,13 @@ repeat([1,2,3]) //[1,2,3,1,2,3,1,2,3]
 ```
 Your solution:
 
+/**
+* Repeat 3 times the contents of an array
+**/
+function repeat(arr) {
+	return arr;
+}
+
 ###### if we type in our console your function and repeat([1,2,3]) then the result should be [1,2,3,1,2,3,1,2,3] 
 
 ### Task 2:
@@ -19,6 +26,13 @@ Make this work (no vowels, lowercase except the first letter):
 reformat("liMeSHArp DeveLoper TEST") //Lmshrp dvlpr tst
 ```
 Your solution:
+
+/**
+* No vowels, lowercase except the first letter
+**/
+function reformat(str) {
+	return str;
+}
 
 ###### if we type in our console your function and reformat("liMeSHArp DeveLoper TEST") then the result should be Lmshrp dvlpr tst
 
@@ -36,6 +50,13 @@ next_binary_number([1,0]) // [1,1]
 // [1,0,0,0,0,0,0,0,0,1] => [1,0,0,0,0,0,0,0,1,0]
 ```
 Your solution:
+
+/**
+* Just a function for finding the next binary number
+**/
+function next_binary_number(arr) {
+	return arr;
+}
 
 ###### if we type in our console your function and next_binary_number([1,0,0,0,0,0,0,0,0,1]) then the result should look like 1,0,0,0,0,0,0,0,1,0 (or as an array).
 
